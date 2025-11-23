@@ -32,7 +32,7 @@ connection.connect(async (err) => {
   connection.query(sql, [ADMIN_EMAIL, hashedPassword], (err, result) => {
     if (err) {
       if (err.code === 'ER_DUP_ENTRY') {
-        console.log("Email admin tersebut sudah ada.");
+        console.log("Email admin telah terdaftar");
       } else {
         console.error("Gagal membuat admin: ", err);
       }
